@@ -1,17 +1,6 @@
 using UnityEngine;
 using System.Collections;
-//Серега
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-=======
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-=======
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 public class Interface : MonoBehaviour {
 	private bool Military = false;
 	private bool Commercial = true;
@@ -42,9 +31,9 @@ public class Interface : MonoBehaviour {
 	private float UpgradesSliderValue = 0.0f;
 	
 	private bool vniz = false;
-	public float coor = 430.0f;
-	public int coor1 = 570;
-	public int coor2 = 570;
+	private float coor = 430.0f;
+	private int coor1 = 570;
+	private int coor2 = 570;
 	private float widthper;
 	private float heightper;
 	private int i = 10;
@@ -63,12 +52,8 @@ public class Interface : MonoBehaviour {
 	private bool Create = false;
 	public bool canCreate = false;
 	
-	private float dlinnaScrolla_Military = 0.0f;
-	private float dlinnaScrolla_Commercial = 0.0f;
-	private float dlinnaScrolla_Social = 0.0f;
-	private int collichestvo_knopok_Military = 0;
-	private int collichestvo_knopok_Commercial = 0;
-	private int collichestvo_knopok_Social = 0;
+	private float dlinnaScrolla = 0.0f;
+	private int collichestvo_knopok = 0;
 	
 	private GameObject lastHitBuild;
 	
@@ -106,7 +91,7 @@ public class Interface : MonoBehaviour {
 	public bool Gui_narisovan = false;
 	
 	private bool isHovering2 = false;
-	public bool isHovering1 = false;
+	private bool isHovering1 = false;
 	public Camera cShapeGUIcamera;
 	
 	private bool isHovering = false;
@@ -163,10 +148,10 @@ public class Interface : MonoBehaviour {
 		{
 			GUI.BeginGroup(new Rect(widthper * (410/(float)10.9),heightper * (130/(float)7.3),widthper * (250/(float)10.9),heightper * (150/(float)7.3)));
 			GUI.Box(new Rect(widthper * (0/(float)10.9),heightper * (0/(float)7.3),widthper * (250/(float)10.9),heightper * (150/(float)7.3)),"");
-			GUI.Label(new Rect(widthper * (70/(float)10.9),heightper * (10/(float)7.3),widthper * (110/(float)10.9),heightper * (20/(float)7.3)),"Ymenie",guiskin.customStyles[11]);
-			GUI.Label(new Rect(widthper * (30/(float)10.9),heightper * (40/(float)7.3),widthper * (190/(float)10.9),heightper * (40/(float)7.3)),"Opisanie",guiskin.customStyles[13]);
+			GUI.Label(new Rect(widthper * (70/(float)10.9),heightper * (10/(float)7.3),widthper * (110/(float)10.9),heightper * (20/(float)7.3)),"Умение",guiskin.customStyles[11]);
+			GUI.Label(new Rect(widthper * (30/(float)10.9),heightper * (40/(float)7.3),widthper * (190/(float)10.9),heightper * (40/(float)7.3)),"Описаниеafij \n wechper.xhpdfsojgcs[pkgpox/[phxp,d.f/['phv/kdpouv[codthjpx['dfovyie[orc'[d9ivd[",guiskin.customStyles[13]);
 			GUI.Box(new Rect(widthper * (30/(float)10.9),heightper * (90/(float)7.3),widthper * (60/(float)10.9),heightper * (50/(float)7.3)),"");
-			if(GUI.Button(new Rect(widthper * (100/(float)10.9),heightper * (90/(float)7.3),widthper * (120/(float)10.9),heightper * (50/(float)7.3)),"Ystanovit",guiskin.customStyles[11]))
+			if(GUI.Button(new Rect(widthper * (100/(float)10.9),heightper * (90/(float)7.3),widthper * (120/(float)10.9),heightper * (50/(float)7.3)),"Установить",guiskin.customStyles[11]))
 			{
 				
 			}
@@ -444,18 +429,8 @@ public class Interface : MonoBehaviour {
 			GUI.Label(new Rect(widthper *(20/(float)10.9),heightper *(583/(float)7.3)- RatingsSliderValue,widthper * (80 / (float)10.9),heightper * (25 / (float)7.3)),"Name",guiskin.customStyles[11]);
 			GUI.Label(new Rect(widthper *(110/(float)10.9),heightper *(583/(float)7.3)- RatingsSliderValue,widthper * (80 / (float)10.9),heightper * (25 / (float)7.3)),"Opisanie",guiskin.customStyles[11]);
 			GUI.Label(new Rect(widthper *(200/(float)10.9),heightper *(583/(float)7.3)- RatingsSliderValue,widthper * (80 / (float)10.9),heightper * (25 / (float)7.3)),"Level",guiskin.customStyles[11]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 			GUI.EndGroup();
 			GUI.EndGroup();
-=======
-			GUI.EndGroup();
-			GUI.EndGroup();
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-=======
-			GUI.EndGroup();
-			GUI.EndGroup();
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 			RatingsSliderValue = GUI.VerticalSlider(new Rect(widthper * (310/(float)10.9),heightper * (30/(float)7.3),widthper * (1010/(float)10.9),heightper * (410/(float)7.3)),RatingsSliderValue,0.0f,Ratings_dlinna);
 			GUI.EndGroup();
 		}
@@ -625,8 +600,6 @@ public class Interface : MonoBehaviour {
 				CubArray[0] = true;
 				StratMod = true;
 				
-<<<<<<< HEAD
-<<<<<<< HEAD
 			}
 			if(new Rect(widthper * (10 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)).Contains(Event.current.mousePosition))
 			{
@@ -640,36 +613,6 @@ public class Interface : MonoBehaviour {
 				if(widthper * (10 /(float)10.9) - hSliderValue > 0 && (!(widthper * (10 /(float)10.9) - hSliderValue < 709)))
 					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
 			}
-=======
-			}
-			if(new Rect(widthper * (10 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)).Contains(Event.current.mousePosition))
-			{
-			Debug.Log("rect1");
-			if(widthper * (10 /(float)10.9) - hSliderValue > 0 && widthper * (10 /(float)10.9) - hSliderValue < 709)
-				{
-					GUI.Box(new Rect(widthper * (10 /(float)10.9) - hSliderValue,heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-				}
-				if((!(widthper * (10 /(float)10.9) - hSliderValue > 0)) && widthper * (10 /(float)10.9) - hSliderValue < 709)
-					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-				if(widthper * (10 /(float)10.9) - hSliderValue > 0 && (!(widthper * (10 /(float)10.9) - hSliderValue < 709)))
-					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-			}
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-=======
-			}
-			if(new Rect(widthper * (10 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)).Contains(Event.current.mousePosition))
-			{
-			Debug.Log("rect1");
-			if(widthper * (10 /(float)10.9) - hSliderValue > 0 && widthper * (10 /(float)10.9) - hSliderValue < 709)
-				{
-					GUI.Box(new Rect(widthper * (10 /(float)10.9) - hSliderValue,heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-				}
-				if((!(widthper * (10 /(float)10.9) - hSliderValue > 0)) && widthper * (10 /(float)10.9) - hSliderValue < 709)
-					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-				if(widthper * (10 /(float)10.9) - hSliderValue > 0 && (!(widthper * (10 /(float)10.9) - hSliderValue < 709)))
-					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-			}
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 			if (GUI.Button(new Rect(widthper * (110 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)),"",guiskin.customStyles[10]))
 			{
 				for (int i = 0; i <= 16; i++)
@@ -1485,7 +1428,7 @@ public class Interface : MonoBehaviour {
 				if(widthper * (1210 /(float)10.9) - hSliderValue > 0 && (!(widthper * (1210 /(float)10.9) - hSliderValue < 709)))
 					GUI.Box(new Rect(widthper * (810 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
 			}
-			/*if (GUI.Button(new Rect(widthper * (1310 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)),"ComBuild14",guiskin.customStyles[11]))
+			if (GUI.Button(new Rect(widthper * (1310 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)),"ComBuild14",guiskin.customStyles[11]))
 			{
 				for (int i = 0; i <= 16; i++)
 				{
@@ -1596,7 +1539,7 @@ public class Interface : MonoBehaviour {
 					GUI.Box(new Rect(widthper * (10 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
 				if(widthper * (1610 /(float)10.9) - hSliderValue > 0 && (!(widthper * (1610 /(float)10.9) - hSliderValue < 709)))
 					GUI.Box(new Rect(widthper * (810 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
-			}*/
+			}
 		}
 		if (Citizen)
 		{
@@ -1880,7 +1823,7 @@ public class Interface : MonoBehaviour {
 				if(widthper * (910 /(float)10.9) - hSliderValue > 0 && (!(widthper * (910 /(float)10.9) - hSliderValue < 709)))
 					GUI.Box(new Rect(widthper * (810 /(float)10.9),heightper * (0/(float)7.3),widthper * (190/(float)10.9),heightper * (100/(float)7.3)),"rect2");
 			}
-			if (GUI.Button(new Rect(widthper * (1010 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)),"CitBuild11",guiskin.customStyles[11]))
+			if (GUI.Button(new Rect(widthper * (1010 /(float)10.9) - hSliderValue,heightper * (110/(float)7.3),widthper * (90/(float)10.9),heightper * (80/(float)7.3)),"CitBuild11"))
 			{
 				for (int i = 0; i <= 16; i++)
 				{
@@ -2080,7 +2023,7 @@ public class Interface : MonoBehaviour {
 		GUI.EndGroup();
 		GUI.EndGroup();
 		GUI.EndGroup();
-		hSliderValue = GUI.HorizontalSlider(new Rect(widthper * (80/(float)10.9),heightper * (290/(float)7.3),widthper * (1010/(float)10.9),heightper * (20/(float)7.3)),hSliderValue,0.0f,dlinnaScrolla_Military);
+		hSliderValue = GUI.HorizontalSlider(new Rect(widthper * (80/(float)10.9),heightper * (290/(float)7.3),widthper * (1010/(float)10.9),heightper * (20/(float)7.3)),hSliderValue,0.0f,dlinnaScrolla);
 		GUI.EndGroup();
 		if (MilBuilds[0])
 		{
@@ -2615,19 +2558,18 @@ public class Interface : MonoBehaviour {
 		}
 		Gui_narisovan = true;
 		Interface inter1 = (Interface)cam.GetComponent("Interface");
-		if (Gui_narisovan)
-<<<<<<< HEAD
+		if (inter1.Gui_narisovan)
 		{
 			if (isHovering1)
 			{
-				vverx = true;
+				Interface inter = (Interface)cam.GetComponent("Interface");
+				inter.vverx = true;
 			}
 			if (isHovering2)
 			{
 				Interface inter = (Interface)cam.GetComponent("Interface");
 			}
 			if(!isHovering)
-<<<<<<< HEAD
 			{
 				GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[3]);
 				
@@ -2635,15 +2577,6 @@ public class Interface : MonoBehaviour {
 			}
 			else
 			{
-=======
-			{
-				GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[3]);
-				
-				isDown = false;
-			}
-			else
-			{
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 				GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[4]);
 				
 				if(isDown)
@@ -2702,9 +2635,7 @@ public class Interface : MonoBehaviour {
 		Gui_narisovan = false;
 		fmx = 72;
 		Zdanie = true;
-		collichestvo_knopok_Military = 13;
-		collichestvo_knopok_Commercial = 13;
-		collichestvo_knopok_Social = 13;
+		collichestvo_knopok = 17;
 		coor = 430;
 	}
 	private void StartMission_knopka()
@@ -2720,194 +2651,6 @@ public class Interface : MonoBehaviour {
 				if(Input.GetButton("Fire1")) 
 				{
 					isDown = true;
-					startMission = true;
-				}
-				else
-				{
-					isDown = false;
-				}
-			}
-        }
-		if (Physics.Raycast(ray_startMission, out hit_startMission, 10)) 
-		{
-			if(hit_startMission.transform.name=="Button")
-			{
-				isHovering1 = true;
-=======
-		{
-			if (isHovering1)
-			{
-				vverx = true;
-			}
-			if (isHovering2)
-			{
-				Interface inter = (Interface)cam.GetComponent("Interface");
-			}
-			if(!isHovering)
-			{
-				GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[3]);
-				
-				isDown = false;
-			}
-			else
-			{
-				GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[4]);
-				
-				if(isDown)
-				{
-					GUI.Label(new Rect(widthper * (480 / (float)10.9),heightper * ( 0 / (float)7.3),widthper *( 100/ (float)10.9),heightper * (80/ (float)7.3)),"",guiskin.customStyles[5]);
-					Interface inter = (Interface)cam.GetComponent("Interface");
-					inter.startMission = true;
-				}
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-			}
-			if(hit_startMission.transform.name=="Button1")
-			{
-				isHovering2 = true;
-			}
-			
-        }
-		else
-		{
-			isHovering = false;
-			isHovering1 = false;
-			
-			isHovering2 = false;
-			Interface inter = (Interface)cam.GetComponent("Interface");
-
-		}
-	}
-<<<<<<< HEAD
-	private void Rachet_scrolla_paneli_zdaniy_Military()
-	{
-		if (collichestvo_knopok_Military > 10)
-		{
-			dlinnaScrolla_Military = (widthper * (90/(float)10.9) * (collichestvo_knopok_Military - 10)) + 30 ;
-		}
-		if (collichestvo_knopok_Military <= 10)
-		{
-			dlinnaScrolla_Military = 0.01f;
-		}
-	}
-	private void Rachet_scrolla_paneli_zdaniy_Commercial()
-	{
-		if (collichestvo_knopok_Commercial > 10)
-		{
-			dlinnaScrolla_Commercial = (widthper * (90/(float)10.9) * (collichestvo_knopok_Commercial - 10));
-		}
-		if (collichestvo_knopok_Commercial <= 10)
-		{
-			dlinnaScrolla_Commercial = 0.01f;
-		}
-	}
-	private void Rachet_scrolla_paneli_zdaniy_Social()
-	{
-		if (collichestvo_knopok_Social > 10)
-		{
-			dlinnaScrolla_Social = (widthper * (90/(float)10.9) * (collichestvo_knopok_Social - 10));
-		}
-		if (collichestvo_knopok_Social <= 10)
-		{
-			dlinnaScrolla_Social = 0.01f;
-		}
-	}
-	private void Rachet_scrolla_paneli_upgrades()
-	{
-		if (Upgrades_collichestvo_knopok > 5)
-		{
-			UpgradesDlinna = (widthper * (95/(float)10.9) * (Upgrades_collichestvo_knopok - 5)) + widthper * (7/(float)10.9);
-		}
-		if (Upgrades_collichestvo_knopok <= 5)
-		{
-			UpgradesDlinna = 0.1f;
-<<<<<<< HEAD
-		}
-	}
-	private void Rachet_scrolla_paneli_ratings()
-	{
-		if (Ratings_collichestvo_knopok > 7)
-		{
-			Ratings_dlinna = (widthper * (66/(float)10.9) * (Ratings_collichestvo_knopok - 7));
-		}
-		if (Ratings_collichestvo_knopok <= 7)
-		{
-			Ratings_dlinna = 0.1f;
-		}
-	}
-=======
-		}
-	}
-	private void Rachet_scrolla_paneli_ratings()
-	{
-		if (Ratings_collichestvo_knopok > 7)
-		{
-=======
-	private void dostypnost_knopok ()
-	{
-		if(knopka_1_dostypna)
-		{
-			knopka_zdanyi_1 = knopka_zdanyi_1_dostypna;
-		}
-		else
-		{
-			knopka_zdanyi_1 = knopka_zdanyi_1_nedostypna;
-		}
-		if(knopka_2_dostypna)
-		{
-			knopka_zdanyi_2 = knopka_zdanyi_2_dostypna;
-		}
-		else
-		{
-			knopka_zdanyi_2 = knopka_zdanyi_2_nedostypna;
-		}
-		if(knopka_3_dostypna)
-		{
-			knopka_zdanyi_3 = knopka_zdanyi_3_dostypna;
-		}
-		else
-		{
-			knopka_zdanyi_3 = knopka_zdanyi_3_nedostypna;
-		}
-		if(knopka_4_dostypna)
-		{
-			knopka_zdanyi_4 = knopka_zdanyi_4_dostypna;
-		}
-		else
-		{
-			knopka_zdanyi_4 = knopka_zdanyi_4_nedostypna;
-		}
-		if(knopka_5_dostypna)
-		{
-			knopka_zdanyi_5 = knopka_zdanyi_5_dostypna;
-		}
-		else
-		{
-			knopka_zdanyi_5 = knopka_zdanyi_5_nedostypna;
-		}
-	}
-	void Start () {
-		Gui_narisovan = false;
-		fmx = 72;
-		Zdanie = true;
-		collichestvo_knopok_Military = 13;
-		collichestvo_knopok_Commercial = 13;
-		collichestvo_knopok_Social = 13;
-		coor = 430;
-	}
-	private void StartMission_knopka()
-	{
-		ray_startMission = cShapeGUIcamera.ScreenPointToRay(Input.mousePosition);
-		
-        if (Physics.Raycast(ray_startMission, out hit_startMission, 10)) 
-		{
-			if(hit_startMission.transform.name=="irregular_shape")
-			{
-				isHovering = true;
-			
-				if(Input.GetButton("Fire1")) 
-				{
-					isDown = true;
-					startMission = true;
 				}
 				else
 				{
@@ -2937,37 +2680,15 @@ public class Interface : MonoBehaviour {
 
 		}
 	}
-	private void Rachet_scrolla_paneli_zdaniy_Military()
+	private void Rachet_scrolla_paneli_zdaniy()
 	{
-		if (collichestvo_knopok_Military > 10)
+		if (collichestvo_knopok > 10)
 		{
-			dlinnaScrolla_Military = (widthper * (90/(float)10.9) * (collichestvo_knopok_Military - 10)) + 30 ;
+			dlinnaScrolla = (widthper * (90/(float)10.9) * (collichestvo_knopok - 10)) - 15;
 		}
-		if (collichestvo_knopok_Military <= 10)
+		if (collichestvo_knopok <= 10)
 		{
-			dlinnaScrolla_Military = 0.01f;
-		}
-	}
-	private void Rachet_scrolla_paneli_zdaniy_Commercial()
-	{
-		if (collichestvo_knopok_Commercial > 10)
-		{
-			dlinnaScrolla_Commercial = (widthper * (90/(float)10.9) * (collichestvo_knopok_Commercial - 10));
-		}
-		if (collichestvo_knopok_Commercial <= 10)
-		{
-			dlinnaScrolla_Commercial = 0.01f;
-		}
-	}
-	private void Rachet_scrolla_paneli_zdaniy_Social()
-	{
-		if (collichestvo_knopok_Social > 10)
-		{
-			dlinnaScrolla_Social = (widthper * (90/(float)10.9) * (collichestvo_knopok_Social - 10));
-		}
-		if (collichestvo_knopok_Social <= 10)
-		{
-			dlinnaScrolla_Social = 0.01f;
+			dlinnaScrolla = 0.01f;
 		}
 	}
 	private void Rachet_scrolla_paneli_upgrades()
@@ -2985,7 +2706,6 @@ public class Interface : MonoBehaviour {
 	{
 		if (Ratings_collichestvo_knopok > 7)
 		{
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 			Ratings_dlinna = (widthper * (66/(float)10.9) * (Ratings_collichestvo_knopok - 7));
 		}
 		if (Ratings_collichestvo_knopok <= 7)
@@ -2993,10 +2713,6 @@ public class Interface : MonoBehaviour {
 			Ratings_dlinna = 0.1f;
 		}
 	}
-<<<<<<< HEAD
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
-=======
->>>>>>> f8a66268eef4dc99abdbdcdae2405e94d1ab53cb
 	private void skritie_panely_zdaniy()
 	{
 		if (coor < 730)
@@ -3156,9 +2872,7 @@ public class Interface : MonoBehaviour {
 		Setka_i_deystviya_knopok_panely_zdaniy();
 		Rachet_scrolla_Issledovatelskogo_zdaniya();
 		Rachet_widthper_heightper_and_shrift();
-		Rachet_scrolla_paneli_zdaniy_Military();
-		Rachet_scrolla_paneli_zdaniy_Commercial();
-		Rachet_scrolla_paneli_zdaniy_Social();
+		Rachet_scrolla_paneli_zdaniy();
 		skritie_panely_zdaniy();
 		StartMission_knopka();
 		
